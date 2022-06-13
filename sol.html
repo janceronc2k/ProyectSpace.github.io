@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<meta>
+<title>imagen ecologia</title>
+<body background=spacio2.jpg  >
+<center><img src="sol2.gif" style=width:300px;height:300px;></center>
+<p align="center"><b><font size="3"></font></p>
+
+<BODY onload="capswitch()">
+
+<!-- Mirrored from www.jc2k.com/J_Du.html by HTTrack Website Copier/3.x [XR&CO'2002], Thu, 10 Oct 2002 06:26:53 GMT -->
+<HEAD>
+<script lanuage="JavaScript">
+
+// This script by Mike Harty
+// More scripts are at
+// http://www.geocities.com/televisioncity/8970/
+// Where it says a[1] you put the text leave a[2] blank don't touch
+// it or it will be screwed okay have fun and
+// ENJOY!
+// copyright Mike Harty (c)
+
+var count = -1;
+var counter;
+var nchar
+var speedtogo = 200
+
+var a = new Array();
+
+a[1] = "El Sol";
+a[2] = "nnn";
+
+
+function capswitch() {
+ count++
+ if(count == 0){
+   document.wow.display.value = a[1]
+  }
+ if(count == 1){
+    document.wow.display.value = a[2].substring(0, 1) +
+a[1].substring(20, 1) 
+        }
+ if(count > 1){
+   a[3] = a[1].substring(0, count - 1) + a[2].substring(count - 1,
+count) + a[1].substring(20, count)
+  document.wow.display.value = a[3]
+ }
+ if(count == a[1].length){
+    count = -1
+  }
+
+         counter    = setTimeout("capswitch()",speedtogo);
+
+ }
+
+</script>
+</HEAD>
+<center>
+<form name="wow">
+<input type="text" size="5" name="display" value="">
+</form>
+<p>
+
+
+</table>
+</body>
+</html>
